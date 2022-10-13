@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+    <title>Экзамен вариант 1</title>
+    
+    <style>
+        body {margin: 15px 40px;  }
+        
+        #wrap { width: 800px;
+            margin: 0 auto;  }
+        
+        .header {
+            padding: 5px;
+            display: inline;
+        }
+        
+        .header a {color: orange; }
+        
+        .header a:hover {
+            color: #d30;
+            text-decoration: none;
+        }
+        
+        .text {
+            border: 2px dashed gray;
+            padding: 15px;
+            font-family: Georgia, serif;
+            margin-bottom: 15px;
+			overflow: hidden;
+            border-radius: 10px;
+        }
+        
+        .text img {
+            width: 150px;
+            float: left;
+            margin-right: 15px;
+			margin-bottom: 20px;
+            cursor: pointer;
+        }
+        
+        .price {
+            font-size: 1.1em;
+            font-weight: bold;
+            color: #d00;
+            width: 200px;
+            float: left;
+        }
+        
+        .link { width: 300px; }
+        
+        .action {
+            background: #f00;
+            color: #fff;
+            font-weight: bold;
+            width: 100px;
+            text-align: center;
+            padding: 5px;
+            float: right;
+        }
+
+        .link_more {
+            float: left;
+            width: 60%;
+        }
+        
+        .modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1050;
+            display: none;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            background-color: rgba(0,0,0,.5);
+        }
+        .modal__dialog {
+            max-width: 500px;
+            margin: 40px auto;
+        }
+        .modal__content {
+            position: relative;
+            width: 100%;
+            padding: 40px;
+            background-color: #fff;
+            border: 1px solid rgba(0,0,0,.2);
+            border-radius: 4px;
+            max-height: 80vh;
+            overflow-y: auto;
+        }
+        .modal__close {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            
+            color: darkgray;
+
+        }
+        .show {
+            display: block;
+        }
+        .hide {
+            display: none;
+        }
+    </style>
+    
+</head>
+
+<body>
+    <div id="wrap">
+        <h2>Электронные книги</h2>
+
+        <!-- <div class="text">
+           <div class="forImg"><img src="books/airbook_city_led.png" alt="Airbook City LED" title="Airbook City LED" /></div>
+            <h4 class="header"><a href="#">Электронная книга Airbook City LED</a></h4>
+            
+            <p>АКЦИЯ!!! Карта памяти 4Gb в подарок. НAirBook City LED – многофункциональная доступная электронная книга с E-Ink экраном, встроенной подсветкой и поддержкой аудио. Простота управления, эргономичность и привлекательный дизайн корпуса позволяют получить максимальное удовольствие от чтения.</p>
+            <div class="code"> Код товара: 83751</div>
+            <div class="price">Цена: 2 999 грн.</div>
+        </div>
+        <div class="text">
+            <h4 class="header"><a href="#">Электронная книга PocketBook 614 Basic 3 White</a></h4>
+            <img src="books/PocketBook-614-basic-3-white.jpg" alt="PocketBook 614 Basic 3 White" title="PocketBook 614 Basic 3 White" />
+            <p>АКЦИЯ!!! Скидка 300грн. PocketBook 614 станет прекрасным подарком даже для тех, кто до сих пор считает, что бумажную книгу читать проще. Новый ридер содержит все необходимые функции для комфортного электронного чтения. </p>
+            <div class="code"> Код товара: 83750</div>
+            <div class="price">Цена: 2 499 грн.</div>
+        </div>
+        <div class="text">
+            <h4 class="header"><a href="#">Электронная книга Evromedia E-Учебник One</a></h4>
+            <img src="books/evromedia_one.jpg" alt="Evromedia E-Учебник One" title="Evromedia E-Учебник One" />
+            <p>АКЦИЯ!!! Сертификат и фонарик в ПОДАРОК! Дисплей книги Evromedia E-Учебник One изготовлен на основе технологии «электронной бумаги» Е Ink Plus. Благодаря использованию технологии отраженного света чтение возможно даже в самый погожий день. Благодаря интуитивно понятному интерфейсу управлять процессом чтения легко и комфортно. 8 Гб встроенной памяти с возможностью расширения еще до 32 ГБ — это огромная библиотека, которая всегда под рукой! </p>
+            <div class="code"> Код товара: 81890</div>
+            <div class="price">Цена: 2 199 грн.</div>
+        </div>
+        <div class="text">
+            <h4 class="header"><a href="#">Электронная книга  Amazon Kindle Paperwhite 10th Gen 8GB</a></h4>
+            <img src="books/Amazon-Kindle-paperwhite-10th-gen-8GB.jpg" alt="Электронная книга  Amazon Kindle Paperwhite 10th Gen 8GB" title="Электронная книга  Amazon Kindle Paperwhite 10th Gen 8GB" />
+            <p>Это самый тонкий и самый легкий Kindle Paperwhite, с современным дизайном для комфортного чтения в течение многих часов. Он имеет плотность 300 ppi, дисплей Paperwhite, который выводит текст с качеством печатного текста и вдвое больше накопителя, чем в предыдущем поколении. Плюс заряд батареи держится неделями, а не часами.</p>
+            <div class="code"> Код товара: 80673</div>
+            <div class="price">Цена: 3 249 грн.</div>
+        </div>
+        <div class="text">
+            <h4 class="header"><a href="#">Электронная книга Amazon Kindle All-new 10th Gen</a></h4>
+            <img src="books/Amazon-Kindle-All-new-10th-Gen.jpg" alt="Amazon Kindle All-new 10th Gen" title="Amazon Kindle All-new 10th Gen" />
+            <p>Управление читалкой кнопка-джойстик и боковые клавиши перелистывания. Сенсорный экран с подсветкой 6".Память 4 Gb | Wi-Fi | Форматы книг: Kindle (AZW), TXT, PDF, unprotected MOBI, PRC natively, HTML, DOC, DOCX (требуется конвертация). </p>
+            <div class="code">Код товара: 83340</div>
+            <div class="price">Цена: 2 778 грн.</div>
+        </div>
+        <div class="text">
+            <h4 class="header"><a href="#">Электронная книга AirBook City Base</a></h4>
+            <img src="books/airbook_city_base.jpg" alt="AirBook City Base" title="AirBook City Base" />
+            <p>АКЦИЯ!!! Сертификат ПОДАРОК! Книга оснащена 6-дюймовым HD экраном, который является безвредным для глаз благодаря технологии E-ink Carta 800*600 пикселей, держит заряд до 30 дней. Поскольку в экране книги отсутствует мерцание, можно забыть о бликах на солнце и читать любимые произведения под любыми углам обзора, не ощущая дискомфорта и не опасаясь за свое зрение.</p>
+            <div class="code">Код товара: 83453</div>
+            <div class="price">Цена: 2 499 грн.</div>
+        </div>
+        <div class="text">
+            <h4 class="header"><a href="#">Электронная книга Onyx BOOX Cleopatra 3</a></h4>
+            <img src="books/onyx-cleopatra.jpg" alt="Onyx BOOX Cleopatra 3" title="Onyx BOOX Cleopatra 3" />
+            <p>АКЦИЯ!!! ОБЛОЖКА в ПОДАРОК! ONYX BOOX Cleopatra 3 — устройство для чтения электронных книг с экраном с увеличенной диагональю и сверхвысоким разрешением. Новейший экран E Ink Carta с диагональю 6,8 дюйма, подсветка MOON Light+ и поддержка функции SNOW Field - все это вы найдете в устройстве с 1 ГБ оперативной и 8 ГБ встроенной памяти. Есть модуль Wi-Fi и браузер для сёрфинга в сети Интернет. Электронная книга базируется на операционной системе Android 4.0. </p>
+            <div class="code">Код товара: 83737</div>
+            <div class="price">Цена: 7 535 грн.</div>
+        </div>
+          <div class="text">
+            <h4 class="header"><a href="#">Электронная книга PocketBook 632 Touch HD 3 Copper</a></h4>
+            <img src="books/pocketbook-touch-hd-3.png" alt="PocketBook 632 Touch HD 3 Copper" title="PocketBook 632 Touch HD 3 Copper" />
+            <p>АКЦИЯ!!! Скидка 50% на обложку! PocketBook 632 Touch HD3 обладает инфракрасным мультисенсорным экраном, светодиодной подсветкой, встроенным Wi-Fi модулем, 16 ГБ встроенной памяти, производительным процессором с тактовой частотой 1ГГц и 512 МБ оперативной памяти.  Инфракрасный экран E Ink Carta с HD разрешением (1448х1072) и 300DPI, гарантирует высокую контрастность, четкость изображения и баланс между белым и черным цветами электронной страницы.</p>
+            <div class="code">Код товара: 96224</div>
+            <div class="price">Цена: 5 099 грн.</div>
+        </div> -->
+    </div>
+    <script src='js/variant1 - start.js'></script>
+</body>
+
+</html>

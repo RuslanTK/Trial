@@ -1,0 +1,71 @@
+*{
+    font-family: 'Montserrat', sans-serif;
+}
+header{
+background: url(../image/bgi.jpg) no-repeat center/cover;
+height: 732px;
+}
+h1,h2,h3{
+    font-weight: bold;
+    
+}
+h4{
+    font-weight: normal;
+}
+h5{font-size: 24px;
+    font-weight: bold;
+
+}
+.btn{
+    min-width: 163px;
+}
+.btn-primary{
+    background-color: #2D3B5C;
+    border-color: #2D3B5C;
+}
+section{
+    margin-top: 82px;
+}
+#catalog h2{
+    margin-bottom: 50px;
+}
+#ingeneer img{
+    margin: 20px 0px 20px 0px;
+}
+#ingeneer h2{
+    font-size: 24px;
+}
+ul {
+    color: #4A94FF; /* Цвет маркеров */
+    padding-left: 16px;
+    
+}
+li{
+    margin: 20px 0px 20px 0px;
+    font-size: 16px;
+    
+}
+
+span{
+    color: black;
+}
+
+.form-check-label{
+    font-size: 11px;
+}
+form{
+background: #FFFFFF;
+border: 8px solid #2D3B5C;
+box-sizing: border-box;
+border-radius: 8px;
+}
+
+#testimonial p{
+    font-size: 15px;
+}
+#testimonial svg{
+    margin: 10px 0px 10px 0px;
+}
+
+
+

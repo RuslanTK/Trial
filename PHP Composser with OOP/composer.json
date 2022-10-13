@@ -1,0 +1,16 @@
+{
+    "name": "user/hw10",
+    "description": "hw10",
+    "autoload": {
+        "psr-4": {
+            "classes\\": "classes/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Ruslan Tuktaryev",
+            "email": "Ruslan.tk@ukr.net"
+        }
+    ],
+    "require": {}
+}
